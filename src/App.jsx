@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div></div>
+      <h1>우리팀 화이팅~</h1>
     </>
   );
 }
