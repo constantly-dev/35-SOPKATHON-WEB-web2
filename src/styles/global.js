@@ -8,6 +8,22 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  #root {
+    width: 100%;
+    min-width: 375px;
+    max-width: 430px;
+    min-height: 100dvh;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 430px) {
+    #root {
+      max-width: var(—max-width);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    }
+  }
+
   html,
   body {
     width: 100%;
