@@ -18,7 +18,7 @@
 <br/>
 
 <h3> 2️⃣ 카드 선택 & 전화번호 획득 </h3>
-<img src="https://github.com/user-attachments/assets/10dbcc0b-07e1-4b61-bb36-e359e8fb6557"  alt="기능1-대표이미지" />
+<img src="https://github.com/user-attachments/assets/f43bf288-4db4-4392-9c64-a99f01e92c9e"  alt="기능1-대표이미지" />
 <div ><strong> 카드 선택 & 전화번호 획득 </strong>  
 
 <p>모임에 입장한 유저는 자신에 대한 힌트를 보내고, 방에 쌓인 카드 중 원하는 힌트를 보고 선택할 수 있습니다. <br/>선택한 카드를 통해 다른 유저의 전화번호와 미션을 획득할 수 있습니다.</p><br/></div>
