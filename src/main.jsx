@@ -4,11 +4,15 @@ import App from './App.jsx';
 import GlobalStyle from './styles/global.js';
 import { router } from './routes/Router.jsx';
 import { RouterProvider } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import theme from './styles/theme.js';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <GlobalStyle />
-    <App />
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <App />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 );
