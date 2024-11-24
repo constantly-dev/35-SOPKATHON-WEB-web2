@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import SvgBtnLetterInformation from '../../assets/svg/BtnLetterInformation';
-import styled from 'styled-components';
 import { useNavigate, useParams } from 'react-router-dom';
-import { cardInfoData } from '../../constants/mocks/boardCardData';
+import styled from 'styled-components';
 import getCardData from '../../apis/getCardData';
+import SvgBtnLetterInformation from '../../assets/svg/BtnLetterInformation';
+import { cardInfoData } from '../../constants/mocks/boardCardData';
 
 const Info = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState({});
   const { teamId, cardId } = useParams();
   console.log(`teamId: ${teamId}`);
   console.log(`cardId: ${cardId}`);
@@ -22,7 +22,7 @@ const Info = () => {
     const fetchCardData = async () => {
       try {
         const data = await getCardData(cardId, teamId);
-        setData(data);
+        setData(data.data);
       } catch (error) {
         console.log('에러:', error);
       }
@@ -47,17 +47,17 @@ const Info = () => {
         <InfoContentDiv>
           <div>
             <InfoLabel>힌트</InfoLabel>
-            <InfoText>{hint}</InfoText>
+            <InfoText>{data.hint}</InfoText>
           </div>
 
           <div>
             <InfoLabel>전화번호</InfoLabel>
-            <InfoText>{phoneNumber}</InfoText>
+            <InfoText>{data.phoneNumber}</InfoText>
           </div>
 
           <div>
             <InfoLabel>미션</InfoLabel>
-            <InfoText>{mission}</InfoText>
+            <InfoText>{data.mission}</InfoText>
           </div>
         </InfoContentDiv>
 

@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 import SvgBtnLetterCloseHintNoText from '../../assets/svg/BtnLetterCloseHintNoText';
 import SvgBtnLetterOpenHintNoText from '../../assets/svg/BtnLetterOpenHintNoText';
-import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
 
 const BoardCard = ({ children, isAbleClick, selectData, cardId, teamId }) => {
   const isCardOpne = cardId === selectData[0];
@@ -25,7 +25,7 @@ const BoardCard = ({ children, isAbleClick, selectData, cardId, teamId }) => {
 
   const handleClickModalButton = () => {
     // navigate(`/groups/${groupId}/info/${cardId}`);
-    navigate(`/groups/1/info/${cardId}`);
+    navigate(`/groups/${teamId}/info/${cardId}`);
     // navigate('/groups/1/info/1');
   };
 

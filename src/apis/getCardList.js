@@ -2,10 +2,12 @@ import { isAxiosError } from 'axios';
 import { Axios } from './axiosInstance';
 
 const getCardList = async (teamId) => {
+  const userId = localStorage.getItem('id');
+
   try {
     const response = await Axios.get(`/api/v1/cards?teamId=${teamId}`, {
       headers: {
-        'User-Id': 1, // userId를 헤더에 추가
+        'User-Id': userId, // userId를 헤더에 추가
       },
     });
     return response.data;
